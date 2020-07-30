@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.christiangalsterer.bitbucket.server</groupId>
     <artifactId>bitbucket-asciidoc-plugin</artifactId>
-    <version>3.1.2</version>
+    <version>4.0.0</version>
 
     <organization>
         <name>Christian Galsterer</name>
@@ -14,11 +14,11 @@
     <packaging>atlassian-plugin</packaging>
 
     <properties>
-        <bitbucket.version>5.5.0</bitbucket.version>
+        <bitbucket.version>6.5.1</bitbucket.version>
         <bitbucket.data.version>${bitbucket.version}</bitbucket.data.version>
-        <amps.version>6.3.0</amps.version>
-        <plugin.testrunner.version>1.2.0</plugin.testrunner.version>
-        <maven-compiler-plugin>3.3</maven-compiler-plugin>
+        <amps.version>8.0.4</amps.version>
+        <bitbucket-maven-plugin.version>1.30.5</bitbucket-maven-plugin.version>
+        <plugin.testrunner.version>2.0.1</plugin.testrunner.version>
     </properties>
 
     <licenses>
@@ -37,18 +37,6 @@
                 <version>${bitbucket.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.atlassian.bitbucket.server</groupId>
-                <artifactId>bitbucket-api</artifactId>
-                <version>${bitbucket.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.atlassian.bitbucket.server</groupId>
-                <artifactId>bitbucket-spi</artifactId>
-                <version>${bitbucket.version}</version>
-                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -107,14 +95,13 @@
                             <dataVersion>${bitbucket.data.version}</dataVersion>
                         </product>
                     </products>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin}</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <pluginArtifacts>
+                        <pluginArtifact>
+                            <groupId>com.atlassian.labs.plugins</groupId>
+                            <artifactId>quickreload</artifactId>
+                            <version>${bitbucket-maven-plugin.version}</version>
+                        </pluginArtifact>
+                    </pluginArtifacts>
                 </configuration>
             </plugin>
         </plugins>

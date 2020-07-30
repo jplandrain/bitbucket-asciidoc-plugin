@@ -1,79 +1,89 @@
-= Introduction
+== Introduction
 
 An add-on for https://www.atlassian.com/software/bitbucket/server[Atlassian Bitbucket Server] to render AsciiDoc files in the source view panel.
 
-= Installation
+== Installation
 
 The plugin is available in the https://marketplace.atlassian.com/plugins/org.christiangalsterer.bitbucket.server.bitbucket-asciidoc-plugin/server/overview[Atlassian Marketplace] and can be installed directly in Bitbucket Server using the Universal Plugin Manager (UPM), see https://marketplace.atlassian.com/plugins/org.christiangalsterer.bitbucket-asciidoc-plugin#tabs-installation[here] for details.
 
-= Releases
+== Releases
 
-== 3.x.x
+=== 4.x.x
+
+The 4.x.x versions are for Bitbucket Server &gt;= 6.0.0
+
+==== 4.0.0 (2019-11-xx)
+
+This version includes the following changes:
+
+* Fix: https://github.com/christiangalsterer/bitbucket-asciidoc-plugin/issues/27[Bitbucket version 6]
+
+=== 3.x.x
 
 The 3.x.x versions are for Bitbucket Server &gt;= 5.0.0
 
-=== 3.1.2 (2017-11-18)
+==== 3.1.2 (2017-11-18)
 
 This version includes the following changes:
 
 * Fix: https://github.com/christiangalsterer/bitbucket-asciidoc-plugin/issues/21[Broken relative links]
 
-=== 3.1.1 (2017-11-15)
+==== 3.1.1 (2017-11-15)
 
 This version includes the following changes:
 
 * Fix: https://github.com/christiangalsterer/bitbucket-asciidoc-plugin/issues/20[Broken links in TOC]
 
-=== 3.1.0 (2017-10-28)
+==== 3.1.0 (2017-10-28)
 
 This version includes the following changes:
 
 * https://github.com/christiangalsterer/bitbucket-asciidoc-plugin/issues/9[Improved support for file include directives]
 * Support for `env-bitbucket` and `env`:`bitbucket` document attributes for conditional rendering, see also http://asciidoctor.org/docs/user-manual/#conditional-preprocessor-directives
 
-=== 3.0.0 (2017-05-07)
+==== 3.0.0 (2017-05-07)
 
 This version includes the following changes:
 
 * Compatibility with Bitbucket 5.0.0
 
 
-== 2.x.x
+=== 2.x.x
 
 The 2.x.x versions are for Bitbucket Server &gt;= 4.0.0 and &lt; 5.0.0
 
-=== 2.4.2 (2017-11-18)
+==== 2.4.2 (2017-11-18)
 
 This version includes the following changes:
 
 * Fix: https://github.com/christiangalsterer/bitbucket-asciidoc-plugin/issues/21[Broken relative links]
 
-=== 2.4.1 (2017-11-15)
+==== 2.4.1 (2017-11-15)
 
 This version includes the following changes:
 
 * Fix: https://github.com/christiangalsterer/bitbucket-asciidoc-plugin/issues/20[Broken links in TOC]
 
-=== 2.4.0 (2017-10-28)
+==== 2.4.0 (2017-10-28)
 
 This version includes the following changes:
 
 * https://github.com/christiangalsterer/bitbucket-asciidoc-plugin/issues/9[Improved support for file include directives]
 * Support for `env-bitbucket` and `env`:`bitbucket` document attributes for conditional rendering, see also http://asciidoctor.org/docs/user-manual/#conditional-preprocessor-directives
 
-=== 2.3.2 (2016-11-13)
+==== 2.3.2 (2016-11-13)
 
 This version includes the following changes:
 
 * Fix: Image includes not correctly rendered for non-default branches
 
-=== 2.3.1 (2016-06-10)
+==== 2.3.1 (2016-06-10)
 
 This version includes the following changes:
 
 * Fix: Correct handling of file extensions
 
-=== 2.3.0 (2016-02-13)
+==== 2.3.0 (2016-02-13)
 
 This version includes the following changes:
 
@@ -81,31 +91,31 @@ This version includes the following changes:
 * Update to asciidoctor.js 1.5.4
 * Update to highlight.js 9.1.0
 
-=== 2.2.0 (2016-02-06)
+==== 2.2.0 (2016-02-06)
 
 This version includes the following changes:
 
 * Rendering of relative image locations
 
-=== 2.1.0 (2016-01-06)
+==== 2.1.0 (2016-01-06)
 
 This version includes the following changes:
 
 * Syntax highlighting using https://highlightjs.org[highlight.js]
 * Improved layout to be closer to Bitbucket Server Markdown support
 
-=== 2.0.0 (2015-12-21)
+==== 2.0.0 (2015-12-21)
 
 This is the first release of the add-on. It provides the following features:
 
 * Rendering of AsciiDoc documents in the source view
 * Usage of https://github.com/asciidoctor/asciidoctor.js[asciidoctor.js 1.5.3-preview.5]
 
-== 1.x.x
+=== 1.x.x
 
 The 1.x.x versions were originally reserved for Bitbucket Server &lt; 4.0.0. No releases planned anymore.
 
-= License
+== License
 
 [source]
 ----
@@ -123,3 +133,37 @@ The 1.x.x versions were originally reserved for Bitbucket Server &lt; 4.0.0. No 
    See the License for the specific language governing permissions and
    limitations under the License.
 ----
+
+== Contribute
+
+Install the Atlassian SDK, following the instructions found
+https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/[here].
+
+The sdk comes with a preconfigured _maven_, with a settings file pointing to
+atlassian repositories, either use this maven (`atlas-mvn`) directly, or within
+your IDE, you can tell to use the atlassian shipped maven distribution here
+`<atlassian-plugin-sdk-home>/apache-maven-<mvn version>`. For more
+information, read https://developer.atlassian.com/server/framework/atlassian-sdk/working-with-maven/[Atlassian SDK guide]
+to work with maven.
+
+
+In IntelliJ it's possible to change the maven home here:
+
+_Preferences | Build, Execution, Deployment | Build Tools | Maven_
+
+.Maven home path to set when Atlassian SDK was installed on mac via homebrew
+[source]
+----
+/usr/local/Cellar/atlassian-plugin-sdk/8.0.16/libexec/apache-maven-3.5.4
+----
+
+If set correctly the project should be imported without any issue.
+
+* Run bitbucket locally with `atlas-run --product bitbucket`
+* Navigate to `http://localhost:7990/bitbucket`
+* Login with `admin` / `admin`
+* Interact with the default project:
+** `git clone http://localhost:7990/bitbucket/scm/project_1/rep_1.git rep_1`
+** `git add demo.adoc`
+** `git commit --message="adds asciidoc demo file"`
+** `git push`

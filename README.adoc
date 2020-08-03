@@ -12,6 +12,14 @@ The plugin is available in the https://marketplace.atlassian.com/plugins/org.chr
 
 The 4.x.x versions are for Bitbucket Server &gt;= 6.0.0
 
+==== 4.0.1 (2019-11-xx)
+
+This version includes the following changes:
+
+* Upgrades Asciidoctor.JS to 2.0.3
+* Upgrades MathJAX to 2.7.6
+* Upgrades Highlight.JS to 9.16.2 and supports highlighting of additional languages
+
 ==== 4.0.0 (2019-11-xx)
 
 This version includes the following changes:
@@ -167,3 +175,9 @@ If set correctly the project should be imported without any issue.
 ** `git add demo.adoc`
 ** `git commit --message="adds asciidoc demo file"`
 ** `git push`
+
+Also take a look at these documentation from Atlassian SDK
+* https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/
+* https://developer.atlassian.com/server/framework/atlassian-sdk/frequently-used-commands/
+* https://developer.atlassian.com/server/framework/atlassian-sdk/automatic-plugin-reinstallation-with-quickreload/[Automatic plugin reinstallation with QuickReload]
+* https://developer.atlassian.com/server/framework/atlassian-sdk/modify-the-plugin-using-quickreload/

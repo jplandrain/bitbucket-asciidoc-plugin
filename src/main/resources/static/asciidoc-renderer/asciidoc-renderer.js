@@ -5,7 +5,7 @@ define('asciidoc/asciidoc-renderer', [
 ], function(
     $,
     _,
-    asciidoctor
+    Opal
 ) {
  function AsciiDocRenderer($container) {
         this.$container = $container;
@@ -44,9 +44,9 @@ define('asciidoc/asciidoc-renderer', [
         });
 
         try {
-            var attributes =  {'source-highlighter': 'highlightjs', 'stylesheet': 'idea.css', 'linkcss!': '', 'copycss!': '', 'showtitle': '', 'stem!': '', 'env-bitbucket': '', 'env': 'bitbucket'};
-            var options = {'to_file': false, 'safe': 'secure', 'attributes': attributes};
-            var html = asciidoctor.convert(content, options);
+            var attributes =  Opal.hash({'source-highlighter': 'highlightjs', 'stylesheet': 'idea.css', 'linkcss!': '', 'copycss!': '', 'showtitle': '', 'stem!': '', 'env-bitbucket': '', 'env': 'bitbucket'});
+            var options = Opal.hash({'to_file': false, 'safe': 'secure', 'attributes': attributes});
+            var html = Opal.Asciidoctor.$convert(content, options);
             this.$container.html(html);
             postProcess(this.$container, options, asciiDocRawUrl, commitHash);
         } catch (e) {
@@ -56,6 +56,13 @@ define('asciidoc/asciidoc-renderer', [
 
 
     function postProcess($content, options, asciiDocRawUrl, commitHash) {
+
+        var attributes = [];
+
+        if ((options['$key?']("attributes")) === true ) {
+            attributes = options['$[]']("attributes")
+        }
+
         applyHighlighting($content, 'highlightjs', '');
         handleImages($content, asciiDocRawUrl, commitHash);
         handleLinks($content, asciiDocRawUrl, commitHash);

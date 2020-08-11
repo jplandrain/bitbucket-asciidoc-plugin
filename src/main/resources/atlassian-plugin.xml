@@ -34,12 +34,12 @@
     </client-resource>
 
     <client-resource key="asciidoctor" name="Asciidoctor JS Library">
-        <resource type="download" name="asciidoctor-all.js" location="/static/lib/asciidoctor/asciidoctor-all.js" />
+        <resource type="download" name="asciidoctor.min.js" location="/static/lib/asciidoctor/asciidoctor.min.js" />
         <directory location="/static/lib/asciidoctor" />
     </client-resource>
 
     <client-resource key="highlight" name="Highlight JS Library">
-        <resource type="download" name="highlight.js" location="/static/lib/highlight/highlight.js" />
+        <resource type="download" name="highlight.js" location="/static/lib/highlight/highlight.pack.js" />
         <directory location="/static/lib/highlight" />
     </client-resource>
     

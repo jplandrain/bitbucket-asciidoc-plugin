@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.christiangalsterer.bitbucket.server</groupId>
     <artifactId>bitbucket-asciidoc-plugin</artifactId>
-    <version>4.0.0</version>
+    <version>4.0.1</version>
 
     <organization>
         <name>Christian Galsterer</name>
@@ -102,6 +102,9 @@
                             <version>${bitbucket-maven-plugin.version}</version>
                         </pluginArtifact>
                     </pluginArtifacts>
+                    <enableQuickReload>true</enableQuickReload>
+                    <enableFastdev>false</enableFastdev>
+                    <compressResources>false</compressResources>
                 </configuration>
             </plugin>
         </plugins>

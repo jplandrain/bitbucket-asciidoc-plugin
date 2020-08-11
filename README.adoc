@@ -4,7 +4,10 @@ An add-on for https://www.atlassian.com/software/bitbucket/server[Atlassian Bitb
 
 == Installation
 
-The plugin is available in the https://marketplace.atlassian.com/plugins/org.christiangalsterer.bitbucket.server.bitbucket-asciidoc-plugin/server/overview[Atlassian Marketplace] and can be installed directly in Bitbucket Server using the Universal Plugin Manager (UPM), see https://marketplace.atlassian.com/plugins/org.christiangalsterer.bitbucket-asciidoc-plugin#tabs-installation[here] for details.
+Until version 3.x.x this plugin was available in the https://marketplace.atlassian.com/plugins/org.christiangalsterer.bitbucket.server.bitbucket-asciidoc-plugin/server/overview[Atlassian Marketplace] and was installed directly in Bitbucket Server 5.x using the Universal Plugin Manager (UPM), see https://marketplace.atlassian.com/plugins/org.christiangalsterer.bitbucket-asciidoc-plugin#tabs-installation[here] for details.
+However, starting with the version 6.x, its development wasn't very active anymore. So it hadn't been updated to include pull-requests related to the version 6.x of Bitbucket Server.
+
+This fork of the initial project is meant to reintegrate the pull-requests in order to release a version that is compatible with Bitbucket version 6.x
 
 == Releases
 

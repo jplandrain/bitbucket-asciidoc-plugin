@@ -3,20 +3,20 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.christiangalsterer.bitbucket.server</groupId>
     <artifactId>bitbucket-asciidoc-plugin</artifactId>
-    <version>4.0.1</version>
+    <version>5.0.0</version>
 
     <organization>
-        <name>Christian Galsterer</name>
-        <url>https://github.com/christiangalsterer/bitbucket-asciidoc-plugin</url>
+        <name>Jean-Pol Landrain</name>
+        <url>https://github.com/jplandrain/bitbucket-asciidoc-plugin</url>
     </organization>
     <name>Asciidoc Plugin for Bitbucket Server</name>
     <description>Renders AsciiDoc files in the source view of Bitbucket Server.</description>
     <packaging>atlassian-plugin</packaging>
 
     <properties>
-        <bitbucket.version>6.5.1</bitbucket.version>
+        <bitbucket.version>7.8.0</bitbucket.version>
         <bitbucket.data.version>${bitbucket.version}</bitbucket.data.version>
-        <amps.version>8.0.4</amps.version>
+        <amps.version>8.2.0</amps.version>
         <bitbucket-maven-plugin.version>1.30.5</bitbucket-maven-plugin.version>
         <plugin.testrunner.version>2.0.1</plugin.testrunner.version>
     </properties>

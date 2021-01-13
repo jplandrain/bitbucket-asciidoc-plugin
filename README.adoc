@@ -9,6 +9,8 @@ However, starting with the version 6.x, its development wasn't very active anymo
 
 This fork of the initial project is meant to reintegrate the pull-requests in order to release a version that is compatible with Bitbucket versions > 6.x
 
+Manual installation into your Bitbucket server must be achieved. The release files can be found on this GitHub: https://github.com/jplandrain/bitbucket-asciidoc-plugin/releases
+
 == Releases
 
 === 5.x.x

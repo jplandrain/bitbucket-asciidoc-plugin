@@ -192,6 +192,7 @@ If set correctly the project should be imported without any issue.
 ** `git push`
 
 Also take a look at these documentation from Atlassian SDK
+
 * https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/
 * https://developer.atlassian.com/server/framework/atlassian-sdk/frequently-used-commands/
 * https://developer.atlassian.com/server/framework/atlassian-sdk/automatic-plugin-reinstallation-with-quickreload/[Automatic plugin reinstallation with QuickReload]

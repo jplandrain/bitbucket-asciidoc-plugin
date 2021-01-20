@@ -170,17 +170,11 @@ information, read https://developer.atlassian.com/server/framework/atlassian-sdk
 to work with maven.
 
 
-In IntelliJ it's possible to change the maven home here:
+In IntelliJ, it's possible to change the maven home here:
 
 _Preferences | Build, Execution, Deployment | Build Tools | Maven_
 
-.Maven home path to set when Atlassian SDK was installed on mac via homebrew
-[source]
-----
-/usr/local/Cellar/atlassian-plugin-sdk/8.0.16/libexec/apache-maven-3.5.4
-----
-
-If set correctly the project should be imported without any issue.
+If set correctly, the project should be imported without any issue.
 
 * Run bitbucket locally with `atlas-run --product bitbucket`
 * Navigate to `http://localhost:7990/bitbucket`
